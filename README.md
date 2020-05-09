@@ -21,7 +21,7 @@ Update: The model accuracy when training using `trainv2.py` gives around ~99%. T
 ![Okay](SS/okay.PNG)
 
 ## Try it out on colab!
-<a href="https://colab.research.google.com/github/iishipatel/Hand-Gesture-Emoji-Detector/blob/master/Model%20training%2C%20evaluation%20and%20explanation.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/iishipatel/Hand-Gesture-Emoji-Detector/blob/master/Model%20training%2C%20evaluation%20and%20explanation.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
 The colab file includes a data generator to download, extract and construct the data folders.
 Using avg_pool and some kernel_regularizers, the accuracy has been bumped to ~99%.
 Further, there are model metrics vizualizations for the training process.
