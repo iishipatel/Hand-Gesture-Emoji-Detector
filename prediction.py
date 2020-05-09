@@ -72,13 +72,11 @@ while True:
     emoji = cv2.resize(emoji, dim, interpolation = cv2.INTER_AREA)
         
         
-    added_image = cv2.addWeighted(frame,0.5,emoji,0.5,0)
-    
-    cv2.imwrite('Frame', added_image)
+    cv2.imshow("Emoji", emoji)
     
     # Displaying the predictions
-    cv2.putText(added_image, prediction[0][0], (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)    
-    cv2.imshow("Frame", added_image)
+    cv2.putText(framess, prediction[0][0], (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)    
+    cv2.imshow("Frame", frame)
     
     interrupt = cv2.waitKey(10)
     if interrupt & 0xFF == ord('s'): # esc key
