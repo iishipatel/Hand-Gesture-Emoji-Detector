@@ -7,14 +7,14 @@ One of the problems that I couldn't resove was to get the emoji appear on the vi
 ## OUTPUT
 
 ### Palm
-![Palm](SS/palm.png)
+![Palm](SS/palm.PNG)
 
 ### Fist
-![Fist](SS/fist.png)
+![Fist](SS/fist.PNG)
 
 ### Index Up
-![Index Up](SS/index.png)
+![Index Up](SS/index.PNG)
 
 ### Okay
-![Okay](SS/okay.png)
+![Okay](SS/okay.PNG)
 
