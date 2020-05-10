@@ -13,6 +13,7 @@ loaded_model = model_from_json(model_json)
 loaded_model.load_weights("modelHand.h5")
 print("Loaded model from disk")
 
+
 cap = cv2.VideoCapture(0)
 
 # Category dictionary
@@ -54,8 +55,6 @@ while True:
     
     if prediction[0][0]=='Palm':
         emoji=cv2.imread('Emoji/palm.png')
-    elif prediction[0][0]=='Loser':
-        emoji=cv2.imread('Emoji/loser.png')
     elif prediction[0][0]=='Fist' or prediction[0][0]=='C':
         emoji=cv2.imread('Emoji/fist.png')
     elif prediction[0][0]=='Index Up' or prediction[0][0]=='Thumbs Up':
@@ -64,18 +63,21 @@ while True:
         emoji=cv2.imread('Emoji/loser.png')
     else:
         emoji=cv2.imread('Emoji/okay.png')
-        
-    width = 500
-    height = 500
+ 
+    width = 224
+    height = 224
     dim = (width, height)
-        
-    emoji = cv2.resize(emoji, dim, interpolation = cv2.INTER_AREA)
-        
-        
-    cv2.imshow("Emoji", emoji)
     
+            
+    #start of change    
+    emoji = cv2.resize(emoji,(width,height))
+ 
+    frame[90:90+width,10:10+height,:] = emoji
+ 
+    #end of my change
+
     # Displaying the predictions
-    cv2.putText(framess, prediction[0][0], (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)    
+    cv2.putText(frame, prediction[0][0], (10, 40), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)    
     cv2.imshow("Frame", frame)
     
     interrupt = cv2.waitKey(10)
